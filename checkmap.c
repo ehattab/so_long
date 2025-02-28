@@ -6,38 +6,36 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:21:57 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/27 13:37:31 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:20:39 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// void	map_as_wall(t_pars *pars)
-// {
-// 	int	i;
-// 	int	j;
-
-// 	j = 0;
-// 	i = 0;
-// 	while (pars->map[i][j] != NULL)
-// 	{
-// 		while (j < pars->sizeline)
-// 			{
-// 			if (pars->map[0][j] != 1 || pars->map[pars->colonne][j] != 1)
-// 				ft_printf("Erreur map incompatible");
-// 			j++;
-// 			}
-// 		while (i != pars->colonne)
-// 		{
-// 			if (pars->map[i][0] != 1 && pars->map[i][pars->sizeline - 1] != 1)
-// 				ft_printf("Erreur map incompatible");
-// 			i++;
-// 		}
-// 	}
-// }
-
-
-void	map_E_P_C()
+void	map_E_P_C(t_pars *pars)
+{
+	int	i;
+	int	j;
+	int	k;
+	
+	j = 0;
+	i = 1;
+	k = 0;
+	while (pars->map[i])
+	{
+		ft_printf("Prblm \n");
+		j += occ_z(pars->map[i], 'E');
+		j += occ_z(pars->map[i], 'P');
+		ft_printf("j = %d\n", j);
+		k += occ_z(pars->map[i], 'C');
+		ft_printf("k = %d\n", k);
+		i++;
+	}
+	if (j != 2 || k < 1)
+	{
+		ft_printf("Prblm collectible ou sortie entrer");
+	}
+}
 
 // int	map_is_possible(fd)
 // {}

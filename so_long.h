@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:49:11 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/27 19:14:13 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/02/28 16:48:09 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ void	stock_map(char *av, t_pars *pars);
 void	sizemap(t_pars *pars, char *av);
 void	map_has_wall(t_pars *pars);
 void	error();
+int		occ_z(char *str, char c);
+void	map_E_P_C(t_pars *pars);
 #endif

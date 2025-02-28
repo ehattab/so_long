@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:48:55 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/27 19:13:58 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:03:45 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ void	map_has_wall(t_pars *pars)
 	int	i;
 	int	j;
 
-	j = 0;
 	i = 0;
+	j = 0;
 	while (pars->map[i])
 	{
 		while (pars->map[0][j])
 		{
-			if (pars->map[0][j] != 1 || pars->map[pars->nbrline][j] != 1)
-				error("(Wall)");
+			if (pars->map[0][j] != '1' || pars->map[pars->nbrline - 1][j] != '1')
+				error("the map is not surrounded by a wall");
 			j++;
 		}
-		if (pars->map[i][0] != 1 || pars->map[i][pars->sizeline ] != 1)
-			error("(Wall)");
+		if (pars->map[i][0] != '1' || pars->map[i][pars->sizeline - 1] != '1')
+			error("the map is not surrounded by a wall");
 		i++;
 	}
 }
@@ -92,14 +92,13 @@ void	is_rectangle(t_pars *pars)
 	}
 }
 
-int main(int ac, char **av)
-{
-	// int	fd;
-	// int	i;
-	t_pars pars;
-	(void)ac;
-	sizemap(&pars, av[1]);
-	stock_map(av[1], &pars);
-	is_rectangle(&pars);
-	map_as_wall(&pars);
-}
+// int main(int ac, char **av)
+// {
+// 	t_pars pars;
+// 	(void)ac;
+// 	(void)av;
+// 	sizemap(&pars, av[1]);
+// 	stock_map(av[1], &pars);
+// 	is_rectangle(&pars);
+// 	map_has_wall(&pars);
+// }
