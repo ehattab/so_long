@@ -6,13 +6,13 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:21:44 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/20 17:03:44 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:41:17 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int occ_z(char *str, char c)
+int	occ_z(char *str, char c)
 {
 	int	i;
 	int	j;
@@ -22,7 +22,8 @@ int occ_z(char *str, char c)
 	while (str[i])
 	{
 		if (str[i] != '1' && str[i] != 'P' && str[i] != 'E' && str[i] != '0'
-			&& str[i] != 'C' && str[i] != '\n' && str[i] != '\0' && str[i] != 'F')
+			&& str[i] != 'C' && str[i] != '\n'
+			&& str[i] != '\0' && str[i] != 'F')
 			error("There are invalid characters");
 		else if (str[i] == c)
 			j++;
@@ -42,7 +43,7 @@ int	ft_strlen2(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		i++;
 	}

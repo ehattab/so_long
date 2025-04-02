@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:09:22 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/25 17:05:02 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:42:30 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	file_is_ok(char *file)
 {
-	int fd;
-	int len;
+	int	fd;
+	int	len;
 
 	len = strlen(file);
-	if	(len < 4 || strcmp(file + len - 4, ".ber") != 0)
-		return(error("please insert a file .ber"));
+	if (len < 4 || strcmp(file + len - 4, ".ber") != 0)
+		return (error("please insert a file .ber"));
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		error("file open error");

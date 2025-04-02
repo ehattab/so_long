@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:20:19 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/25 16:39:50 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:47:28 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,7 @@ void	moove(t_game *game, int new_x, int new_y)
 {
 	if (game->map[new_y][new_x] == '1')
 		return ;
-	if (game->map[new_y][new_x] != 'E'
-	&& game->collected != game->nbr_collectible)
+	if (game->map[new_y][new_x] != 'E')
 		ft_printf("moove player : %d\n", game->count);
 	if (game->map[new_y][new_x] == 'C')
 	{
@@ -120,10 +119,7 @@ void	moove(t_game *game, int new_x, int new_y)
 	if (game->map[new_y][new_x] == 'E')
 	{
 		if (game->collected == game->nbr_collectible)
-		{
-			ft_printf("BRAVO\n");
 			exit_game(game, 0);
-		}
 		return ;
 	}
 	game->map[game->player_y][game->player_x] = '0';

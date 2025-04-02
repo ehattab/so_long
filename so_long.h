@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:49:11 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/25 17:04:47 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 16:53:53 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ typedef struct s_pars
 	int		y;
 	int		i;
 	int		j;
-	void	*mlx_ptr;
-	void	*win_ptr;
-	void	*textures[5];
+	int		fd;
+	int		count;
 }		t_pars;
 
 typedef struct s_game
@@ -68,7 +67,7 @@ typedef struct s_game
 	int		nbr_collectible;
 	int		new_x;
 	int		new_y;
-	t_pars	*parse;
+	t_pars	*pars;
 }	t_game;
 
 void	file_is_ok(char *file);

@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:48:00 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/25 16:46:59 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 16:16:02 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	main(int ac, char **av)
 	draw_map(&game);
 	mlx_key_hook(game.w, keypress, &game);
 	mlx_loop(game.mlx);
-	free_map(pars.cmap);
-	free_map(game.map);
 	free_map(pars.map);
+	free_map(game.map);
 	return (0);
 }

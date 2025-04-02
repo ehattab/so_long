@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 13:08:58 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:52:38 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 16:22:41 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,11 @@ char	*ft_read(int fd, char *s)
 		}
 		buff[lu] = '\0';
 		s = ft_strjoin(s, buff);
+
 	}
 	free(buff);
 	return (s);
-}
+} 
 
 char	*ft_line(char *s)
 {

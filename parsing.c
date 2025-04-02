@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:48:55 by ehattab           #+#    #+#             */
-/*   Updated: 2025/03/25 17:01:37 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/02 16:52:59 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,28 @@ void	map_has_wall(t_pars *pars)
 void	stock_map(char *av, t_pars *pars)
 {
 	int	i;
-	int	fd;
 
-	fd = open(av, O_RDONLY);
-	if (fd == -1)
+	pars->fd = open(av, O_RDONLY);
+	if (pars->fd == -1)
 		error("file open error");
 	pars->map = malloc(sizeof(char *) * (pars->nbrline + 1));
 	if (pars->map == NULL)
-		error("no memory");
+		exit(EXIT_FAILURE);
 	i = 0;
-	pars->map[i] = get_next_line(fd);
-	if (pars->map[i][ft_strlen(pars->map[i]) - 1] == '\n')
-		pars->map[i][ft_strlen(pars->map[i]) - 1] = '\0';
-	while (++i < pars->nbrline)
+	pars->ligne = get_next_line(pars->fd);
+	if (!pars->ligne)
+		error("file is empty");
+	while (i < pars->nbrline)
 	{
-		pars->map[i] = get_next_line(fd);
-		if (pars->map[i][ft_strlen(pars->map[i]) - 1] == '\n')
-			pars->map[i][ft_strlen(pars->map[i]) - 1] = '\0';
+		if (pars->ligne[ft_strlen2(pars->ligne) - 1] == '\n')
+			pars->ligne[ft_strlen2(pars->ligne) - 1] = '\0';
+		pars->map[i] = ft_strdup2(pars->ligne);
+		free(pars->ligne);
+		pars->ligne = get_next_line(pars->fd);
+		i++;
 	}
 	pars->map[i] = NULL;
-	close(fd);
+	close(pars->fd);
 }
 
 void	sizemap(t_pars *pars, char *av)
