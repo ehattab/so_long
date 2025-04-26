@@ -6,12 +6,11 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:52:01 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:39:00 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/03 18:41:11 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/libft.h"
-
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,12 +6,11 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:08:21 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:39:00 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/03 18:40:51 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/libft.h"
-
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

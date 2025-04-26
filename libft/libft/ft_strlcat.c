@@ -6,12 +6,11 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:21:12 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:39:00 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/03 18:41:41 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/libft.h"
-
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

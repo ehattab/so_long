@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:09:22 by ehattab           #+#    #+#             */
-/*   Updated: 2025/04/02 17:42:30 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/26 16:08:43 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	compil_parsing(t_pars *pars, t_game *game)
 	game->collected = 0;
 	game->player_x = pars->x;
 	game->player_y = pars->y;
-	game->count = 0;
+	game->count = 1;
 	game->background = NULL;
 	game->wall = NULL;
 	game->player = NULL;

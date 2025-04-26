@@ -6,12 +6,11 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:59:28 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:39:00 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/03 18:40:44 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/libft.h"
-
 
 int	ft_isalpha(int c)
 {

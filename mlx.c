@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:20:19 by ehattab           #+#    #+#             */
-/*   Updated: 2025/04/02 17:47:28 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/26 16:06:40 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ int	keypress(int keycode, t_game *game)
 	if (keycode == ESC_KEY)
 		exit_game(game, 0);
 	if (keycode == W_KEY && game->player_y > 0)
-		moove(game, game->player_x, game->player_y - 1);
+		move(game, game->player_x, game->player_y - 1);
 	if (keycode == A_KEY && game->player_x > 0)
-		moove(game, game->player_x - 1, game->player_y);
+		move(game, game->player_x - 1, game->player_y);
 	if (keycode == S_KEY && game->player_y < game->height)
-		moove(game, game->player_x, game->player_y + 1);
+		move(game, game->player_x, game->player_y + 1);
 	if (keycode == D_KEY && game->player_x < game->width)
-		moove(game, game->player_x + 1, game->player_y);
+		move(game, game->player_x + 1, game->player_y);
 	return (0);
 }
 
@@ -105,7 +105,7 @@ void	draw_map(t_game *g)
 	}
 }
 
-void	moove(t_game *game, int new_x, int new_y)
+void	move(t_game *game, int new_x, int new_y)
 {
 	if (game->map[new_y][new_x] == '1')
 		return ;

@@ -6,12 +6,11 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:56:01 by ehattab           #+#    #+#             */
-/*   Updated: 2025/02/24 20:39:00 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/03 18:41:02 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/libft.h"
-
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

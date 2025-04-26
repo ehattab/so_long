@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:49:11 by ehattab           #+#    #+#             */
-/*   Updated: 2025/04/02 16:53:53 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/04/26 16:07:00 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ int		exit_game(t_game *game, int flag);
 void	draw_map(t_game *g);
 void	load_textures(t_game *game);
 int		keypress(int keycode, t_game *game);
-void	moove(t_game *g, int new_x, int new_y);
+void	move(t_game *g, int new_x, int new_y);
 void	free_map(char **map);
 #endif
